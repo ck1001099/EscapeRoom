@@ -9,6 +9,12 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameController.singleton == null){
+            singleton = this;
+        } else {
+            Destroy(this);
+        }
+
         
     }
 
