@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.asymmetricescaperoom.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\NTU HCI Lab\\Documents\\HCI Projects\\CHI20-EscapeRoom\\EscapeRoom\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "AsymmetricEscapeRoom [Testing]"
+        }
+      }
+    }
+  ]
+}
