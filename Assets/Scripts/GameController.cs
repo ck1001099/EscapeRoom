@@ -6,6 +6,10 @@ public class GameController : MonoBehaviour
 {
     public static GameController singleton;
 
+    public List<GameObject> stages;
+
+    public TrackerController trackerController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +19,17 @@ public class GameController : MonoBehaviour
             Destroy(this);
         }
 
-        
+        StartCoroutine(GameFlow());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    IEnumerator GameFlow(){
+        foreach (GameObject stage in stages){
+            StageController stageController = stage.GetComponent<StageController>();
+            stageController.Initialization();
+            while (!stageController.IsCompleted()){
+                yield return null;
+            }
+        }
         
     }
 }

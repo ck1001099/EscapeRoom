@@ -206,7 +206,8 @@ namespace Leap.Unity {
                         Matrix4x4.TRS(position, 
                                       Quaternion.identity, 
                                       Vector3.one * radius * 2.0f * transform.lossyScale.x), 
-                        _sphereMat, 0, 
+                        _sphereMat,
+                        gameObject.layer, 
                         null, 0, null, _castShadows);
     }
 
