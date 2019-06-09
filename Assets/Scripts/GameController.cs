@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
     public static GameController singleton;
 
     public List<GameObject> stages;
-
+    
     public TrackerController trackerController;
 
     // Start is called before the first frame update
