@@ -29,6 +29,7 @@ public class StageElectricLine : MonoBehaviour, StageController
 
     public void Initialization(){
         Debug.Log("[Stage Start] Stage Name: StageElectricLine");
+        this.gameObject.SetActive(true);
         isCompleted = false;
     }
 
@@ -37,6 +38,8 @@ public class StageElectricLine : MonoBehaviour, StageController
     }
 
     public void End(){
+        electricLine.GetComponent<LineRenderer>().material.color = new Color(230 / 256f, 220 / 256f, 130 / 256f);
+
         electricLine.point1.GetComponent<ElectricLinePoint>().tracker.GetComponent<SteamVR_TrackedObject>().enabled = false;
         electricLine.point2.GetComponent<ElectricLinePoint>().tracker.GetComponent<SteamVR_TrackedObject>().enabled = false;
 
